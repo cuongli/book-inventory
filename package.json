@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "lint": "jshint --exclude=node_modules/** **.js",
+    "smoke": "curl process.env.SERVICE_URL",
     "test": "mocha"
   },
   "author": "Cuong Van Truong",
