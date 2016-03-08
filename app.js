@@ -8,7 +8,7 @@ module.exports = function (bookRepository) {
     app.use(middleware.logRequest);
     app.use(bodyParser.json());
 
-    app.get('/', logRequest, function (req, res) {
+    app.get('/', middleware.logRequest, function (req, res) {
         //throw new Error('server error happened');
         res.send('Hello World!');
     });
