@@ -16,9 +16,9 @@ module.exports = function (bookRepository) {
     var routes = require('./routes')(bookRepository);
 
 
-    app.get('/stock', routes.getCount);
+    app.get('/stock', routes.findAll);
     app.post('/stock', routes.stockUp);
-    app.get('/stock/:isbn', routes.findAll);
+    app.get('/stock/:isbn', routes.getCount);
 
     app.use(middleware.clientError);
     app.use(middleware.serverError);
