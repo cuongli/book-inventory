@@ -10,7 +10,7 @@ module.exports = function (bookRepository) {
 
     app.get('/', middleware.logRequest, function (req, res) {
         //throw new Error('server error happened');
-        res.send('Hello World!');
+        res.send('Hello super duper user!');
     });
 
     var routes = require('./routes')(bookRepository);
