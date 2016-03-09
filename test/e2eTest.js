@@ -5,7 +5,7 @@ var assert = require('assert');
 
 
 describe('POST /stock', function(){
-    it('respond with json', function(done){
+    it('should respond with json', function(done){
         request(app)
             .post('/stock')
             .send({"isbn": "1617291781", "count": 10})
@@ -17,5 +17,5 @@ describe('POST /stock', function(){
                 assert.equal(res.body.isbn, "1617291781");
                 done();
             });
-    })
+    });
 });

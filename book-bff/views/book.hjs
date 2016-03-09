@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>book</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <esi:include src="https://kwasniew.github.io/menu.html" />
+
+    <esi:include src="{{ url }}" />
+
+    <img src="{{ cover }}"></h1>
+    <p>Title: {{ title }}</p>
+    <p>Subtitle: {{ subtitle }}</p>
+
+    <esi:include src="https://kwasniew.github.io/footer.html" />
+    <a id="link" href:="https://kwasniew.github.io/footer.html" />
+    <script>
+
+
+
+        function replaceLink() {
+            var link = document.getElementById('link');
+
+            fetch("https://kwasniew.github.io/footer.html").
+                then(function (response) {
+                    return response.text();
+                }).
+                then(function (body) {
+                    link.innerHTML = body;
+                });
+        }
+    </script>
+  </body>
+</html>
