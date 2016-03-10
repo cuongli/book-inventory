@@ -4,9 +4,10 @@ var bodyParser = require('body-parser');
 var middleware = require('./middleware');
 
 
-module.exports = function (bookRepository) {
+module.exports = function (bookRepository, auth) {
     app.use(middleware.logRequest);
     app.use(bodyParser.json());
+    app.use(auth);
 
     app.get('/', middleware.logRequest, function (req, res) {
         //throw new Error('server error happened');
