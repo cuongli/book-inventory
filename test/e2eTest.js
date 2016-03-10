@@ -19,9 +19,3 @@ describe('POST /stock', function(){
             });
     });
 });
-
-/*describe('POST /login', function(){
-    it('should return access denied', function(done){
-
-    });
-});*/
